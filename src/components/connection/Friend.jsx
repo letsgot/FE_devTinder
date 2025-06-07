@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import axios from "axios";
 import { setConnection } from "../../redux/slicers/connectionSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { baseUrl } from '../../constants';
 
-const baseUrl = import.meta.env.VITE_APP_BASE_URL;
+// const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 const Friend = () => {
   const dispatch = useDispatch();

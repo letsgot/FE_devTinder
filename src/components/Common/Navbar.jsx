@@ -1,7 +1,8 @@
 import axios from 'axios'
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
-const baseUrl = import.meta.env.VITE_APP_BASE_URL;
+import { baseUrl } from '../../constants';
+// const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 const Navbar = () => {
     const navigate = useNavigate();
     const userDetail = useSelector(state => state.user.user);

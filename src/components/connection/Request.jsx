@@ -2,7 +2,8 @@ import axios from "axios"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { setRequests } from "../../redux/slicers/connectionSlice";
-const baseUrl = import.meta.env.VITE_APP_BASE_URL;
+import { baseUrl } from '../../constants';
+// const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 import Usercard from '../Profile/Usercard'
 const Request = () => {
 
