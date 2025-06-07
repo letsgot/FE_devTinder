@@ -3,7 +3,6 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { setRequests } from "../../redux/slicers/connectionSlice";
 import { baseUrl } from '../../constants';
-// const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 import Usercard from '../Profile/Usercard'
 const Request = () => {
 

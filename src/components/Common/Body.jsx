@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/slicers/userSlice';
 import { useEffect } from 'react';
 import { baseUrl } from '../../constants';
-// const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 const Body = () => {
     const dispatch = useDispatch();

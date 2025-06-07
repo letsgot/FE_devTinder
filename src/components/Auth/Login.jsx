@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/slicers/userSlice";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from '../../constants';
-// const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 const Login = () => {
     const [emailId, setEmailId] = useState("");

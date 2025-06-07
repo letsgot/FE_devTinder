@@ -5,7 +5,6 @@ import Usercard from '../Profile/Usercard'
 import { removeUserFromFeed, setFeed } from '../../redux/slicers/feedSlice';
 import { baseUrl } from '../../constants';
 
-// const baseUrl = import.meta.env.VITE_APP_BASE_URL;
 
 const Feed = () => {
     const userData = useSelector(state => state.user);
