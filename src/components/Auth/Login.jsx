@@ -14,11 +14,13 @@ const Login = () => {
     const [error, setError] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const apiUrl = (path) => `${baseUrl.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
+
 
     const handleLogin = async () => {
         try {
             const res = await axios.post(
-                baseUrl + "/auth/login",
+                apiUrl("auth/login"),
                 {
                     inputValue: emailId,
                     password,
