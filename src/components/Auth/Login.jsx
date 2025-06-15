@@ -18,6 +18,7 @@ const Login = () => {
 
 
     const handleLogin = async () => {
+        console.log(apiUrl("auth/login"));
         try {
             const res = await axios.post(
                 apiUrl("auth/login"),
