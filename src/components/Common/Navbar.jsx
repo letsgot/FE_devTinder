@@ -2,8 +2,6 @@ import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { baseUrl } from '../../constants';
-import { setConnection, setRequests } from '../../redux/slicers/connectionSlice';
-import { removeUserFromFeed, setFeed } from '../../redux/slicers/feedSlice';
 import { setUser } from '../../redux/slicers/userSlice';
 const Navbar = () => {
     const navigate = useNavigate();
@@ -12,10 +10,6 @@ const Navbar = () => {
     const handleLogout = async () => {
         try {
             await axios.post(`${baseUrl}auth/logout`, {}, { withCredentials: true });
-            dispatch(setConnection({}));
-            dispatch(setRequests({}));
-            dispatch(setFeed({}));
-            dispatch(removeUserFromFeed({}));
             dispatch(setUser({}));
             navigate('/login');
         } catch (error) {
