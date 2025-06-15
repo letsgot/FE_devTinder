@@ -1,13 +1,22 @@
 import axios from 'axios'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { baseUrl } from '../../constants';
+import { setConnection, setRequests } from '../../redux/slicers/connectionSlice';
+import { removeUserFromFeed, setFeed } from '../../redux/slicers/feedSlice';
+import { setUser } from '../../redux/slicers/userSlice';
 const Navbar = () => {
     const navigate = useNavigate();
     const userDetail = useSelector(state => state.user.user);
+    const dispatch = useDispatch();
     const handleLogout = async () => {
         try {
             await axios.post(`${baseUrl}auth/logout`, {}, { withCredentials: true });
+            dispatch(setConnection({}));
+            dispatch(setRequests({}));
+            dispatch(setFeed({}));
+            dispatch(removeUserFromFeed({}));
+            dispatch(setUser({}));
             navigate('/login');
         } catch (error) {
             console.log("Error", error.message);
