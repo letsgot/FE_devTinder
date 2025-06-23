@@ -3,6 +3,7 @@ import axios from "axios";
 import { setConnection } from "../../redux/slicers/connectionSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { baseUrl } from '../../constants';
+import { Link } from "react-router-dom";
 
 
 const Friend = () => {
@@ -44,6 +45,7 @@ const Friend = () => {
                 {friend.description || "No description provided."}
               </p>
             </div>
+            <Link to={'/chat/' + friend?._id}><button className="text-black cursor-pointer">Chat</button></Link>
           </div>
         ))}
       </div>

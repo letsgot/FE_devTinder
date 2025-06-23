@@ -19,7 +19,8 @@ const Navbar = () => {
     return (
         <div className="w-full navbar bg-base-300 shadow-sm px-10">
             <div className="flex-1">
-                <Link to='/' className="btn btn-ghost text-xl">Dev Tinder</Link>
+                {userDetail?.photoUrl ? <Link to='/' className="btn btn-ghost text-xl">Dev Tinder</Link>
+                : <Link to='/login' className="btn btn-ghost text-xl">Dev Tinder</Link>}
             </div>
             <div className="flex gap-2">
                 {/* <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" /> */}

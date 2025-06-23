@@ -34,6 +34,7 @@ const Login = () => {
     };
 
     const handleSignUp = async () => {
+        console.log( baseUrl + "auth/signup");
         try {
             const res = await axios.post(
                 baseUrl + "auth/signup",
