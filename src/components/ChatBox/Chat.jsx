@@ -70,10 +70,14 @@ const Chat = () => {
       <div className='p-5 border-b border-gray-300 text-center'>Chat</div>
       <div className='flex-1 overflow-y-auto p-4'>
         {messages.map((message, index) => (
-          <div key={index} className="mb-2">
-            <div className="font-semibold">{message.firstName}:</div>
+          <div
+            key={index}
+            className={`mb-2 ${user.firstName === message.firstName ? 'chat-end' : 'chat-start'}`}
+          >
+            <div className="font-semibold">{message.firstName} :</div>
             <div className="chat-bubble p-2 rounded">{message.text}</div>
           </div>
+
         ))}
       </div>
       <div className='flex p-3 gap-2'>
